@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CV Web - Julian Alvarez</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body id="inicio">
+
+<div class="container">
+
+<header>
+    <h1>Julian Alvarez</h1>
+    <nav>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+        <button onclick="toggleModoOscuro()">🌙</button>
+    </nav>
+</header>
+
+<section id="datos">
+    <div class="perfil-container">
+        <img src="img/Foto.CVWEB.jpeg" alt="Foto de perfil">
+
+        <div class="texto-datos">
+            <h3>Desarrollador Full Stack / Programador</h3>
+            <p>Especialista en crear soluciones digitales modernas. Enfocado en el desarrollo frontend con React y backend con Python/Django. Amante de los retos lógicos y el código limpio.</p>
+            <p><strong>Ubicación:</strong> Buenos Aires, Argentina</p>
+            <p>Email: <a href="mailto:julian_alvarez912@gmail.com">julian_alvarez912@gmail.com</a></p>
+        </div>
+    </div>
+</section>
+
+<section id="sobre-mi">
+    <h3>Sobre mí</h3>
+    <p>Desarrollador Full Stack apasionado por crear soluciones escalables y eficientes. Especializado en JavaScript (React & Node.js), con gran capacidad para resolver problemas complejos y trabajar en entornos ágiles. Siempre en busca de aprender nuevas tecnologías y mejorar la experiencia del usuario.</p>
+</section>
+
+<section id="habilidades">
+    <h3>Habilidades</h3>
+
+    <p>HTML</p>
+    <div class="barra"><div class="nivel html"></div></div>
+
+    <p>CSS</p>
+    <div class="barra"><div class="nivel css"></div></div>
+
+    <p>JavaScript</p>
+    <div class="barra"><div class="nivel js"></div></div>
+
+    <p>Django</p>
+    <div class="barra"><div class="nivel django"></div></div>
+</section>
+
+<section id="experiencia">
+  <h3>Experiencia Laboral</h3>
+  <p>
+    <strong>Senior Web Developer</strong> en 
+    <a href="https://www.google.com" target="_blank">TechNova Solutions</a>
+  </p>
+  
+  <p>
+    Para más información, puedes contactarme a mi casilla de reclutamiento: 
+    <a href="mailto:reclutamiento@technova.com">reclutamiento@technova.com</a>
+  </p>
+</section>
+
+<section id="proyectos">
+    <h3>Proyectos</h3>
+
+    <div class="grid-proyectos">
+        <div class="card">
+            <h4>E-commerce Tech</h4>
+            <p>Tienda online con carrito de compras dinámico y catálogo de productos en JS.</p>
+        </div>
+
+        <div class="card">
+            <h4>Weather Dashboard</h4>
+            <p>Visualizador de clima en tiempo real utilizando la Fetch API de OpenWeather.</p>
+        </div>
+    </div>
+
+    <div id="extra-proyectos"></div>
+
+    <button onclick="mostrarProyectos()">Ver más</button>
+</section>
+
+<section id="contacto">
+    <h3>Contacto</h3>
+
+    <form onsubmit="enviarMail(event)">
+        <input type="text" id="nombre" placeholder="Tu nombre" required>
+        <input type="email" id="email" placeholder="Tu email" required>
+        <textarea id="mensajeTexto" placeholder="Escribí tu mensaje..." required></textarea>
+        <button type="submit">Enviar mensaje</button>
+    </form>
+</section>
+
+<button id="btnInicio" onclick="volverInicio()">⬆</button>
+
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
