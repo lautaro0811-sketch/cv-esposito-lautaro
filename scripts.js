@@ -1,10 +1,9 @@
-<<<<<<< HEAD
-function mostrarProyectos() {
-    const contenedorExtra = document.getElementById("extra-proyectos");
+function showProjects() {
+    const extraContainer = document.getElementById("extra-projects");
     
-    // Proyectos nuevos para el "Ver más" (distintos a los de arriba)
-    const contenido = `
-        <div class="grid-proyectos" style="margin-top: 15px;">
+    // Proyectos nuevos para el "Ver más"
+    const content = `
+        <div class="grid-projects" style="margin-top: 15px;">
             <div class="card">
                 <h4>Task Manager Pro</h4>
                 <p>Gestor de tareas con LocalStorage y filtros de prioridad para productividad.</p>
@@ -16,32 +15,31 @@ function mostrarProyectos() {
         </div>
     `;
 
-    contenedorExtra.innerHTML = contenido;
+    extraContainer.innerHTML = content;
 
-    // Ocultamos el botón para que el diseño quede limpio
-    const boton = document.querySelector("#proyectos button");
+    const boton = document.querySelector("#projects button");
     if (boton) boton.style.display = "none";
 }
 
-function volverInicio() {
-    document.getElementById("inicio").scrollIntoView({
+function scrollToTop() {
+    document.getElementById("home").scrollIntoView({
         behavior: "smooth"
     });
 }
 
-function enviarMail(event) {
+function sendEmail(event) {
     event.preventDefault();
 
-    let nombre = document.getElementById("nombre").value;
+    let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
-    let mensaje = document.getElementById("mensajeTexto").value;
+    let message = document.getElementById("messageText").value;
 
-    let mailtoLink = `mailto:lautaro0811@gmail.com?subject=Contacto de ${nombre}&body=${mensaje} (Responder a: ${email})`;
+    let mailtoLink = `mailto:lautaro0811@gmail.com?subject=Contacto de ${name}&body=${message} (Responder a: ${email})`;
 
     window.location.href = mailtoLink;
 }
 
-// Animaciones modernas
+// Animaciones
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -55,66 +53,6 @@ document.querySelectorAll("section").forEach(sec => {
 });
 
 // Modo oscuro
-function toggleModoOscuro() {
+function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
-=======
-function mostrarProyectos() {
-    const contenedorExtra = document.getElementById("extra-proyectos");
-    
-    // Proyectos nuevos para el "Ver más" (distintos a los de arriba)
-    const contenido = `
-        <div class="grid-proyectos" style="margin-top: 15px;">
-            <div class="card">
-                <h4>Task Manager Pro</h4>
-                <p>Gestor de tareas con LocalStorage y filtros de prioridad para productividad.</p>
-            </div>
-            <div class="card">
-                <h4>Sistema de Inventario</h4>
-                <p>Control de stock desarrollado con lógica de arreglos y persistencia de datos.</p>
-            </div>
-        </div>
-    `;
-
-    contenedorExtra.innerHTML = contenido;
-
-    // Ocultamos el botón para que el diseño quede limpio
-    const boton = document.querySelector("#proyectos button");
-    if (boton) boton.style.display = "none";
-}
-
-function volverInicio() {
-    document.getElementById("inicio").scrollIntoView({
-        behavior: "smooth"
-    });
-}
-
-function enviarMail(event) {
-    event.preventDefault();
-
-    let nombre = document.getElementById("nombre").value;
-    let email = document.getElementById("email").value;
-    let mensaje = document.getElementById("mensajeTexto").value;
-
-    let mailtoLink = `mailto:lautaro0811@gmail.com?subject=Contacto de ${nombre}&body=${mensaje} (Responder a: ${email})`;
-
-    window.location.href = mailtoLink;
-}
-
-// Animaciones modernas
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-        }
-    });
-});
-
-document.querySelectorAll("section").forEach(sec => {
-    observer.observe(sec);
-});
-
-// Modo oscuro
-function toggleModoOscuro() {
-    document.body.classList.toggle("dark-mode");
->>>>>>> f0ad9fe (Primer version del CV web)
 }
