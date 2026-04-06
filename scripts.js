@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 function mostrarProyectos() {
     const contenedorExtra = document.getElementById("extra-proyectos");
     
-    // Proyectos nuevos para el "Ver más" (distintos a los de arriba)
+    // Proyectos nuevos para el "Ver más"
     const contenido = `
         <div class="grid-proyectos" style="margin-top: 15px;">
             <div class="card">
@@ -18,7 +17,6 @@ function mostrarProyectos() {
 
     contenedorExtra.innerHTML = contenido;
 
-    // Ocultamos el botón para que el diseño quede limpio
     const boton = document.querySelector("#proyectos button");
     if (boton) boton.style.display = "none";
 }
@@ -41,7 +39,7 @@ function enviarMail(event) {
     window.location.href = mailtoLink;
 }
 
-// Animaciones modernas
+// Animaciones
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -57,64 +55,22 @@ document.querySelectorAll("section").forEach(sec => {
 // Modo oscuro
 function toggleModoOscuro() {
     document.body.classList.toggle("dark-mode");
-=======
-function mostrarProyectos() {
-    const contenedorExtra = document.getElementById("extra-proyectos");
-    
-    // Proyectos nuevos para el "Ver más" (distintos a los de arriba)
-    const contenido = `
-        <div class="grid-proyectos" style="margin-top: 15px;">
-            <div class="card">
-                <h4>Task Manager Pro</h4>
-                <p>Gestor de tareas con LocalStorage y filtros de prioridad para productividad.</p>
-            </div>
-            <div class="card">
-                <h4>Sistema de Inventario</h4>
-                <p>Control de stock desarrollado con lógica de arreglos y persistencia de datos.</p>
-            </div>
-        </div>
-    `;
-
-    contenedorExtra.innerHTML = contenido;
-
-    // Ocultamos el botón para que el diseño quede limpio
-    const boton = document.querySelector("#proyectos button");
-    if (boton) boton.style.display = "none";
 }
 
-function volverInicio() {
-    document.getElementById("inicio").scrollIntoView({
-        behavior: "smooth"
-    });
-}
 
-function enviarMail(event) {
-    event.preventDefault();
+// Lógica para mostrar/ocultar el botón "Back to Top"
+const backToTopBtn = document.querySelector('.back-to-top');
 
-    let nombre = document.getElementById("nombre").value;
-    let email = document.getElementById("email").value;
-    let mensaje = document.getElementById("mensajeTexto").value;
-
-    let mailtoLink = `mailto:lautaro0811@gmail.com?subject=Contacto de ${nombre}&body=${mensaje} (Responder a: ${email})`;
-
-    window.location.href = mailtoLink;
-}
-
-// Animaciones modernas
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-        }
-    });
+window.addEventListener('scroll', () => {
+    // Si el scroll baja más de 300px desde el inicio
+    if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+    } else {
+        backToTopBtn.classList.remove('show');
+    }
 });
 
-document.querySelectorAll("section").forEach(sec => {
-    observer.observe(sec);
-});
-
-// Modo oscuro
-function toggleModoOscuro() {
-    document.body.classList.toggle("dark-mode");
->>>>>>> f0ad9fe (Primer version del CV web)
+// Asegurarnos de que el botón use la función volverInicio que ya tenés
+if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', volverInicio);
 }
