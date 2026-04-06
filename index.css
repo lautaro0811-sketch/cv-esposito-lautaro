@@ -46,9 +46,9 @@ section {
     transform: translateY(0);
 }
 
-/* --- SOLUCIÓN ISSUE #4 (Contraste) --- */
+
 section a {
-    color: var(--color-link) !important;
+    color: var(--color-link) ;
     text-decoration: underline;
     font-weight: bold;
 }
@@ -79,10 +79,43 @@ section a {
     border-radius: 10px;
 }
 
-.html { width: 85% !important; }
-.css { width: 75% !important; }
-.js { width: 70% !important; }
-.django { width: 60% !important; }
+.html { width: 85% ; }
+.css { width: 75% ; }
+.js { width: 70% ; }
+.django { width: 60% ; }
+
+/* --- SECCIÓN PROYECTOS (RESCATADO) --- */
+
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;                      
+    margin-top: 20px;
+}
+
+.card {
+    background: var(--fondo-card);  
+    padding: 20px;
+    border-radius: 12px;
+    color: var(--texto-claro);     
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.card h4 {
+    margin-top: 0;
+    color: #ffffff;                 
+}
+
+.card:hover {
+    transform: translateY(-5px);    
+}
+
+@media (max-width: 768px) {
+    .grid-proyectos {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* FOTO */
 img {
@@ -94,26 +127,25 @@ img {
 
 /* --- ESTILOS QUE SE ACTIVAN CON EL BOTÓN --- */
 .dark-mode {
-    background-color: #f4f4f4 !important; /* Fondo de la página claro */
-    color: #1e293b !important; /* Texto oscuro */
+    background-color: #f4f4f4 ; 
+    color: #1e293b ; 
 }
 
 .dark-mode section {
-    background-color: #ffffff !important; /* Cajas blancas */
-    color: #1e293b !important;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+    background-color: #ffffff ; 
+    color: #1e293b ;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1) ;
 }
 
 .dark-mode .texto-datos, 
 .dark-mode h3, 
 .dark-mode p {
-    color: #1e293b !important;
+    color: #1e293b ;
 }
 
 .dark-mode .barra {
-    background: #e2e8f0 !important; /* Barras de progreso gris clarito */
+    background: #e2e8f0 ; 
 }
-
 .dark-mode nav a {
-    color: #1e293b !important;
+    color: #1e293b ;
 }
