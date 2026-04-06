@@ -84,7 +84,7 @@
 <section id="contacto">
     <h3>Contacto</h3>
 
-    <form onsubmit="enviarMail(event)">
+    <form class="contact-form" onsubmit="enviarMail(event)">
         <input type="text" id="nombre" placeholder="Tu nombre" required>
         <input type="email" id="email" placeholder="Tu email" required>
         <textarea id="mensajeTexto" placeholder="Escribí tu mensaje..." required></textarea>
@@ -92,7 +92,9 @@
     </form>
 </section>
 
-<button id="btnInicio" onclick="volverInicio()">⬆</button>
+<button class="back-to-top" id="backToTop">
+    ↑
+</button>
 
 </div>
 
