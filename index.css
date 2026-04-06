@@ -1,5 +1,16 @@
-<<<<<<< HEAD
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@font-face {
+    font-family: 'MontserratCustom';
+    src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MontserratCustom';
+    src: url('fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+}
 
 :root {
     --color-principal: #2dbba3;
@@ -10,7 +21,6 @@
 
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
     background: #cebeec;
     color: #7ad6db; 
 }
@@ -184,191 +194,4 @@ button:hover {
     .texto-datos {
         text-align: center;
     }
-=======
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-:root {
-    --color-principal: #2dbba3;
-    --fondo-oscuro: #1e293b;
-    --fondo-card: #4464af;
-    --texto-claro: #f8fafc;
-}
-
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background: #cebeec;
-    color: #7ad6db; 
-}
-
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-}
-
-/* HEADER */
-header {
-    background: var(--fondo-oscuro);
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    margin: 10px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: var(--color-principal);
-}
-
-/* SECCIONES */
-section {
-    background: var(--fondo-oscuro);
-    margin: 20px 0;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
-}
-
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-section:hover {
-    transform: scale(1.02); /* Un toque más sutil */
-}
-
-/* --- SECCIÓN DATOS (Perfil + Texto) --- */
-.perfil-container { /* Agregado el punto (.) que faltaba */
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.texto-datos {
-    text-align: left;
-    color: var(--texto-claro); /* Texto blanco para que resalte en el fondo oscuro */
-}
-
-.texto-datos h3 {
-    margin: 0 0 10px 0;
-    color: var(--color-principal);
-    font-size: 1.8rem;
-}
-
-.texto-datos p {
-    line-height: 1.6;
-    margin: 5px 0;
-}
-
-/* TITULOS */
-h3 {
-    color: var(--color-principal);
-}
-
-/* FOTO */
-img {
-    width: 150px; /* Un poco más grande para que no se pierda */
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid var(--color-principal);
-}
-
-/* HABILIDADES */
-.barra {
-    background: #334155;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.nivel {
-    height: 10px;
-    width: 0;
-    background: var(--color-principal);
-    border-radius: 10px;
-    transition: width 1s ease;
-}
-
-section.visible .html { width: 80%; }
-section.visible .css { width: 75%; }
-section.visible .js { width: 70%; }
-section.visible .django { width: 65%; }
-
-/* PROYECTOS */
-.grid-proyectos {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-.card {
-    background: var(--fondo-card);
-    padding: 15px;
-    border-radius: 10px;
-    transition: 0.3s;
-    color: var(--texto-claro);
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-}
-
-/* BOTONES */
-button {
-    background: var(--color-principal);
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    margin-top: 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    filter: brightness(1.1);
-    transform: scale(1.05);
-}
-
-/* MODO OSCURO */
-.dark-mode {
-    background: #f4f4f4;
-    color: black;
-}
-
-.dark-mode section {
-    background: white;
-    color: #333;
-}
-
-.dark-mode .texto-datos, .dark-mode .card {
-    color: #333;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .grid-proyectos {
-        grid-template-columns: 1fr;
-    }
-    
-    .perfil-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .texto-datos {
-        text-align: center;
-    }
->>>>>>> f0ad9fe (Primer version del CV web)
 }
