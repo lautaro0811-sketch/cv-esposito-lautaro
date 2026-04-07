@@ -60,7 +60,7 @@ section a {
     gap: 30px;
 }
 
-.texto-datos h3 {
+.perfil-titulo {
     color: var(--color-link);
 }
 
@@ -102,7 +102,7 @@ section a {
     transition: transform 0.3s ease;
 }
 
-.card h4 {
+.card-titulo {
     margin-top: 0;
     color: #ffffff;                 
 }
@@ -137,7 +137,7 @@ img {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1) ;
 }
 
-.dark-mode .texto-datos, 
+.dark-mode .perfil-titulo, 
 .dark-mode h3, 
 .dark-mode p {
     color: #1e293b ;
