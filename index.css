@@ -81,6 +81,15 @@ section:hover {
     line-height: 1.6;
     margin: 5px 0;
 }
+section a {
+    color: var(--texto-claro); 
+    text-decoration: underline; 
+    font-weight: bold;
+}
+
+section a:hover {
+    color: var(--color-principal); 
+}
 
 /* TITULOS */
 h3 {
@@ -187,6 +196,10 @@ button:hover {
 
 .dark-mode .texto-datos, .dark-mode .card {
     color: #333;
+}
+
+.dark-mode section a {
+    color: var(--fondo-oscuro); 
 }
 
 /* RESPONSIVE */
