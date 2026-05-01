@@ -3,7 +3,7 @@ function mostrarProyectos() {
     
     // Proyectos nuevos para el "Ver más"
     const contenido = `
-        <div class="grid-proyectos" style="margin-top: 15px;">
+        <div class="grid-proyectos" style="margin-top: 0.9375rem;">
             <div class="card">
                 <h4>Task Manager Pro</h4>
                 <p>Gestor de tareas con LocalStorage y filtros de prioridad para productividad.</p>
@@ -62,8 +62,9 @@ function toggleModoOscuro() {
 const backToTopBtn = document.querySelector('.back-to-top');
 
 window.addEventListener('scroll', () => {
-    // Si el scroll baja más de 300px desde el inicio
-    if (window.scrollY > 300) {
+    const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const threshold = 18.75 * fontSize;
+    if (window.scrollY > threshold) {
         backToTopBtn.classList.add('show');
     } else {
         backToTopBtn.classList.remove('show');

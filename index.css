@@ -15,22 +15,22 @@ body {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 56.25rem;
     margin: auto;
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 /* HEADER */
 header {
     background: var(--fondo-oscuro);
-    padding: 20px;
-    border-radius: 15px;
+    padding: 1.25rem;
+    border-radius: 1rem;
     text-align: center;
 }
 
 nav a {
     color: white;
-    margin: 10px;
+    margin: 0.625rem;
     text-decoration: none;
 }
 
@@ -41,12 +41,12 @@ nav a:hover {
 /* SECCIONES */
 section {
     background: var(--fondo-oscuro);
-    margin: 20px 0;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    margin: 1.25rem 0;
+    padding: 1.56rem;
+    border-radius: 0.94rem;
+    box-shadow: 0 0.625rem 1.56rem rgba(0,0,0,0.3);
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(1.875rem);
     transition: all 0.6s ease;
 }
 
@@ -63,7 +63,7 @@ section:hover {
 .perfil-container { 
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 1.875rem;
 }
 
 .texto-datos {
@@ -72,14 +72,14 @@ section:hover {
 }
 
 .texto-datos h3 {
-    margin: 0 0 10px 0;
+    margin: 0 0 0.625rem 0;
     color: var(--color-principal);
     font-size: 1.8rem;
 }
 
 .texto-datos p {
     line-height: 1.6;
-    margin: 5px 0;
+    margin: 0.31rem 0;
 }
 
 /* TITULOS */
@@ -89,25 +89,25 @@ h3 {
 
 /* FOTO */
 img {
-    width: 150px; 
-    height: 150px;
+    width: 9.375rem; 
+    height: 9.375rem;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid var(--color-principal);
+    border: 0.1875rem solid var(--color-principal);
 }
 
 /* HABILIDADES */
 .barra {
     background: #334155;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    border-radius: 0.625rem;
+    margin-bottom: 0.625rem;
 }
 
 .nivel {
-    height: 10px;
+    height: 0.625rem;
     width: 0;
     background: var(--color-principal);
-    border-radius: 10px;
+    border-radius: 0.625rem;
     transition: width 1s ease;
 }
 
@@ -120,20 +120,20 @@ section.visible .django { width: 65%; }
 .grid-proyectos {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    gap: 0.94rem;
 }
 
 .card {
     background: var(--fondo-card);
-    padding: 15px;
-    border-radius: 10px;
+    padding: 0.94rem;
+    border-radius: 0.625rem;
     transition: 0.3s;
     color: var(--texto-claro);
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    box-shadow: 0 0.31rem 0.94rem rgba(0,0,0,0.4);
 }
 
 /* BOTONES */
@@ -141,9 +141,9 @@ button {
     background: var(--color-principal);
     color: white;
     border: none;
-    padding: 12px 20px;
-    margin-top: 10px;
-    border-radius: 5px;
+    padding: 0.75rem 1.25rem;
+    margin-top: 0.625rem;
+    border-radius: 0.31rem;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
@@ -160,16 +160,16 @@ button:hover {
     flex-direction: column; /* Alineación vertical requerida */
     row-gap: 0.8rem;        /* Espacio entre inputs */
     width: 100%;
-    max-width: 500px;       /* Tamaño prolijo */
-    margin: 20px auto 0;    /* Centrado con margen superior */
+    max-width: 31.25rem;       /* Tamaño prolijo */
+    margin: 1.25rem auto 0;    /* Centrado con margen superior */
 }
 
 .contact-form input, 
 .contact-form textarea {
     width: 100%;            /* Ocupa todo el ancho del form */
     padding: 0.8rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    border-radius: 0.31rem;
+    border: 0.0625rem solid #ccc;
     font-family: inherit;
     box-sizing: border-box; /* Evita que el padding rompa el ancho */
 }
@@ -190,7 +190,7 @@ button:hover {
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
     .grid-proyectos {
         grid-template-columns: 1fr;
     }
@@ -208,21 +208,21 @@ button:hover {
 /* --- BACK TO TOP BUTTON (ISSUE 1) --- */
 .back-to-top {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 1.25rem;
+    right: 1.25rem;
     z-index: 1000;
     display: none; /* Se oculta por defecto para el efecto scroll */
     
     /* Estilos visuales */
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.125rem;
     border-radius: 50%;
     background-color: var(--color-principal);
     color: white;
     border: none;
     cursor: pointer;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.3);
 }
 
 .back-to-top:hover {
