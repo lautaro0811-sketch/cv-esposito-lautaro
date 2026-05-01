@@ -5,13 +5,23 @@
     --fondo-oscuro: #1e293b;
     --fondo-card: #4464af;
     --texto-claro: #f8fafc;
+    --main-bg: #cebeec;
+    --main-text: #7ad6db;
+    --bar-bg: #334155;
+    --white: #ffffff;
+    --border-color: #ccc;
+    --dark-mode-bg: #f4f4f4;
+    --dark-mode-text: #333;
+    --black: #000000;
+    --shadow-standard: rgba(0, 0, 0, 0.3);
+    --shadow-elevated: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background: #cebeec;
-    color: #7ad6db; 
+    background: var(--main-bg);
+    color:var(--main-text); 
 }
 
 .container {
@@ -29,7 +39,7 @@ header {
 }
 
 nav a {
-    color: white;
+    color: var(--white);
     margin: 10px;
     text-decoration: none;
 }
@@ -44,7 +54,7 @@ section {
     margin: 20px 0;
     padding: 25px;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 25px var(--shadow-standard);
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.6s ease;
@@ -98,7 +108,7 @@ img {
 
 /* HABILIDADES */
 .barra {
-    background: #334155;
+    background: var(--bar-bg);
     border-radius: 10px;
     margin-bottom: 10px;
 }
@@ -133,13 +143,13 @@ section.visible .django { width: 65%; }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    box-shadow: 0 5px 15px var(--shadow-elevated);
 }
 
 /* BOTONES */
 button {
     background: var(--color-principal);
-    color: white;
+    color: var(--white);
     border: none;
     padding: 12px 20px;
     margin-top: 10px;
@@ -169,24 +179,24 @@ button:hover {
     width: 100%;            /* Ocupa todo el ancho del form */
     padding: 0.8rem;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     font-family: inherit;
     box-sizing: border-box; /* Evita que el padding rompa el ancho */
 }
 
 /* MODO OSCURO */
 .dark-mode {
-    background: #f4f4f4;
-    color: black;
+    background: var(--dark-mode-bg);
+    color: var(--black);
 }
 
 .dark-mode section {
-    background: white;
-    color: #333;
+    background: var(--white);
+    color: var(--dark-mode-text);
 }
 
 .dark-mode .texto-datos, .dark-mode .card {
-    color: #333;
+    color: var(--dark-mode-text);
 }
 
 /* RESPONSIVE */
@@ -218,11 +228,11 @@ button:hover {
     height: 50px;
     border-radius: 50%;
     background-color: var(--color-principal);
-    color: white;
+    color: var(--white);
     border: none;
     cursor: pointer;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px var(--shadow-standard);
 }
 
 .back-to-top:hover {
