@@ -86,7 +86,7 @@ section:hover {
     color: var(--texto-claro); 
 }
 
-.texto-datos h3 {
+.profile-title {
     margin: 0 0 10px 0;
     color: var(--color-principal);
     font-size: 1.8rem;
@@ -160,6 +160,12 @@ section.visible .django { width: 65%; }
     box-shadow: 0 5px 15px var(--shadow-elevated);
 }
 
+.card-title {
+    margin: 0 0 10px 0;
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
 /* BOTONES */
 button {
     background: var(--color-principal);
@@ -207,6 +213,10 @@ button:hover {
 .dark-mode section {
     background: var(--white);
     color: var(--dark-mode-text);
+}
+
+.dark-mode .profile-title, .dark-mode .card-title {
+    color: var(--dark-mode-text); 
 }
 
 .dark-mode .texto-datos, .dark-mode .card {
