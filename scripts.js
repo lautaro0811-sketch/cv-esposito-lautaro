@@ -5,11 +5,11 @@ function mostrarProyectos() {
     const contenido = `
         <div class="grid-proyectos" style="margin-top: 15px;">
             <div class="card">
-                <h4>Task Manager Pro</h4>
+                <h4 class="card-title">Task Manager Pro</h4>
                 <p>Gestor de tareas con LocalStorage y filtros de prioridad para productividad.</p>
             </div>
             <div class="card">
-                <h4>Sistema de Inventario</h4>
+                <h4 class="card-title">Sistema de Inventario</h4>
                 <p>Control de stock desarrollado con lógica de arreglos y persistencia de datos.</p>
             </div>
         </div>
