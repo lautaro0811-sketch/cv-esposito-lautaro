@@ -1,9 +1,9 @@
-function mostrarProyectos() {
-    const contenedorExtra = document.getElementById("extra-proyectos");
+function showProjects() {
+    const extraContainer = document.getElementById("extra-projects");
     
     // Proyectos nuevos para el "Ver más"
-    const contenido = `
-        <div class="grid-proyectos" style="margin-top: 15px;">
+    const content = `
+        <div class="grid-projects" style="margin-top: 15px;">
             <div class="card">
                 <h4>Task Manager Pro</h4>
                 <p>Gestor de tareas con LocalStorage y filtros de prioridad para productividad.</p>
@@ -15,26 +15,26 @@ function mostrarProyectos() {
         </div>
     `;
 
-    contenedorExtra.innerHTML = contenido;
+    extraContainer.innerHTML = content;
 
-    const boton = document.querySelector("#proyectos button");
-    if (boton) boton.style.display = "none";
+    const button = document.querySelector("#projects button");
+    if (button) button.style.display = "none";
 }
 
-function volverInicio() {
-    document.getElementById("inicio").scrollIntoView({
+function scrollToTop() {
+    document.getElementById("home").scrollIntoView({
         behavior: "smooth"
     });
 }
 
-function enviarMail(event) {
+function sendEmail(event) {
     event.preventDefault();
 
-    let nombre = document.getElementById("nombre").value;
+    let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
-    let mensaje = document.getElementById("mensajeTexto").value;
+    let message = document.getElementById("messageText").value;
 
-    let mailtoLink = `mailto:lautaro0811@gmail.com?subject=Contacto de ${nombre}&body=${mensaje} (Responder a: ${email})`;
+    let mailtoLink = `mailto:lautaro0811@gmail.com?subject=Contacto de ${name}&body=${message} (Responder a: ${email})`;
 
     window.location.href = mailtoLink;
 }
@@ -48,12 +48,12 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 
-document.querySelectorAll("section").forEach(sec => {
-    observer.observe(sec);
+document.querySelectorAll("section").forEach(section => {
+    observer.observe(section);
 });
 
 // Modo oscuro
-function toggleModoOscuro() {
+function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
 }
 
@@ -72,5 +72,5 @@ window.addEventListener('scroll', () => {
 
 // Asegurarnos de que el botón use la función volverInicio que ya tenés
 if (backToTopBtn) {
-    backToTopBtn.addEventListener('click', volverInicio);
+    backToTopBtn.addEventListener('click', scrollToTop);
 }
